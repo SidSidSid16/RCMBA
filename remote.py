@@ -9,7 +9,7 @@ radio.on()
 radio.config(channel=19)
 radio.config(power=7)
 
-delay_ms = 50
+delay_ms = 0
 
 def checkTurnButton():
     turn_status = ""
