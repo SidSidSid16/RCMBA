@@ -63,8 +63,8 @@ while True:
         3 - scale down the accelerometer values
         4 - send to the car
     """
-    message_string = ""     # [accelerometer][left/right]
-    message_string = message_string + str(retrieveAccelerometerValues()) + str(checkTurnButton())
+    message_string = ""     # [left/right][accelerometer]
+    message_string = str(checkTurnButton()) + str(retrieveAccelerometerValues())
     print(message_string)
     radio.send(message_string)
     sleep(delay_ms)
