@@ -27,8 +27,8 @@ while True:
 
         if acceleration_status > 0.5: acceleration_status = 0.5
 
-        speed_left = (acceleration_status*200) * int(message_string_received[2])
-        speed_right = (acceleration_status*200) * int(message_string_received[1])
+        speed_left = (acceleration_status*200) * int(message_string_received[1])
+        speed_right = (acceleration_status*200) * int(message_string_received[0])
 
         analogue_out_left = (speed_left * 1023)/100
         analogue_out_right = (speed_right * 1023)/100
