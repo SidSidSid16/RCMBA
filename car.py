@@ -17,7 +17,7 @@ radio.config(channel=19)
 speed_left = 0      # Speed of the right motor from 0 (off) to 100 (max)
 speed_right = 0     # Speed of the right motor from 0 (off) to 100 (max)
 
-delay_ms = 50
+delay_ms = 0
 
 while True:
     acceleration_status = 0
