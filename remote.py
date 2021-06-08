@@ -30,8 +30,8 @@ def checkTurnButton():
     else:
         turn_status = turn_status + "0"
         
-    if turn_status == "11":
-        turn_status = "00"
+    if turn_status == "00":
+        turn_status = "11"
     
     return turn_status          # 2 bits
 
