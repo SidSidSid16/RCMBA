@@ -23,12 +23,12 @@ while True:
     acceleration_status = 0
     message_string_received = radio.receive()
     if message_string_received != None:
-        acceleration_status = float(message_string_received[2:])
+        acceleration_status = float(message_string_received[3:])
 
     if acceleration_status > 0.5: acceleration_status = 0.5
 
-    speed_left = (acceleration_status*200) * message_string_received[1]
-    speed_right = (acceleration_status*200) * message_string_received[0]
+    speed_left = (acceleration_status*200) * message_string_received[2]
+    speed_right = (acceleration_status*200) * message_string_received[1]
 
     analogue_out_left = (speed_left * 1023)/100
     analogue_out_right = (speed_right * 1023)/100

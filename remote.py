@@ -53,7 +53,7 @@ def retrieveAccelerometerValues():
     Y = accelerometer.get_y()
     Y_norm = (Y - 1024)/(-2048)
 
-    return round(Y_norm, 2)     # 4 characters x.xx
+    return str(Y_norm)[:4]     # 4 characters x.xx
 
 while True:
     """
