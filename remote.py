@@ -67,6 +67,5 @@ while True:
     """
     message_string = ""     # [left/right][accelerometer]
     message_string = str(checkTurnButton()) + str(retrieveAccelerometerValues())
-    print(message_string)
     radio.send(message_string)
     sleep(delay_ms)
