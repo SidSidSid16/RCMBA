@@ -9,7 +9,7 @@ radio.on()
 radio.config(channel=19)
 radio.config(power=7)
 
-delay_ms = 10
+delay_ms = 50
 
 def checkTurnButton():
     turn_status = ""
@@ -53,7 +53,7 @@ def retrieveAccelerometerValues():
     Y = accelerometer.get_y()
     Y_norm = (Y - 1024)/(-2048)
 
-    if Y_norm < 0: Y_norm = 0
+    if Y_norm < 0.1: Y_norm = 0.0100
 
     return str(Y_norm)[:4]     # 4 characters x.xx
 
