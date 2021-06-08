@@ -53,6 +53,8 @@ def retrieveAccelerometerValues():
     Y = accelerometer.get_y()
     Y_norm = (Y - 1024)/(-2048)
 
+    if Y_norm < 0: Y_norm = 0
+
     return str(Y_norm)[:4]     # 4 characters x.xx
 
 while True:
